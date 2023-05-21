@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>My Python Job Portal</title>
+    <style>
+      #hero {
+            width:100%;
+            height:850px;
+            }
+    </style>
+  </head>
+  <body>
+    {% include 'nav.html' %}
+     <img id="hero" src="/static/hero-img.jpg">
+    <div class="container">
+     
+      <h1 class="text-center">My Python Job Portal</h1>
+      <p class="text-center">
+        We are a team of passionate professionals who believe that everyone deserves to find a job they love. Our online job portal is designed to make the job search process easy and efficient for both job seekers and employers.
+
+For job seekers, we offer a wide variety of features to help you find your dream job, including:
+
+A comprehensive database of jobs from all over the world
+Advanced search filters to help you narrow down your results
+The ability to create a personalized profile and upload your resume
+The ability to receive job alerts and apply for jobs with just a few clicks
+      </p>
+      <h2 class="text-center mt-2 mb-4">Open Positions</h2>
+    
+      <div>
+      {% for job in jobs %}
+      
+        {% include 'jobitem.html' %}
+      {% endfor %}
+      </div>
+      
+    </div>  
+   
+    
+    
+  </body>
+</html>
